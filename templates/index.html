@@ -8,6 +8,7 @@
     <title>Polyglot</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
@@ -38,7 +39,10 @@
 
 
 <body>
-    <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+    <div class="card card-image" style="background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Ropa Sans', sans-serif;">
         <div class="text-white text-center py-2 px-3 my-2">
             <div>
                 <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Polyglot</strong></h2>
@@ -75,11 +79,12 @@
 
 
         <div class="row my-5">
-            <div class="col-lg-5" style="padding-left: 40px;">
+            <div class="col-lg-6" style="padding-left: 20px;">
                 
-                <h3 class="font-weight-bold mb-3">
-                    Introduction: ...
-                </h3>
+                <form class="my-5" method='POST' action="/">
+                    <input class="btn purple-gradient btn-lg" type=button value="Text Recognition" id="text_recog">
+                    <input class="btn purple-gradient btn-lg" type=button value="Object Detection" id="object_detect">
+                </form> 
 
                  <h5 class="font-weight-bold mb-3 mt-5">
                     Translate English to
@@ -90,15 +95,12 @@
                 </div>
 
 
-                <form class="my-5" method='POST' action="/">
-                    <input class="btn purple-gradient btn-lg" type=button value="Text Recognition" id="text_recog">
-                    <input class="btn purple-gradient btn-lg" type=button value="Object Detection" id="object_detect">
-                </form>
+                
 
             </div>
             
 
-            <div class="col-lg-7" style="padding-left: 60px;">
+            <div class="col-lg-6" style="padding-left: 60px;">
 
 
                 <div class="translate-output" style="display: none;">
