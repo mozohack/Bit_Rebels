@@ -148,7 +148,7 @@ $(document).ready(function() {
 
     function translation(word, langs){
         var base_url = "https://translate.yandex.net/api/v1.5/tr.json/translate?"
-        var key = 'key=' + "trnsl.1.1.20190302T221501Z.db0a8355be3caec7.473bf490f3317210f75eff2f74de67bd788dc48e"
+        var key = 'key=' + "API-KEY"
         var text = "text=" + word
 
         var requests = [];
@@ -170,7 +170,7 @@ $(document).ready(function() {
 
     function get_translated_data(word, lang) {
         var base_url = "https://translate.yandex.net/api/v1.5/tr.json/translate?"
-        var key = 'key=' + "trnsl.1.1.20190302T221501Z.db0a8355be3caec7.473bf490f3317210f75eff2f74de67bd788dc48e"
+        var key = 'key=' + "API-KEY"
         var text = "text=" + word
         var lang_str = "lang=en-" + lang
         var url = base_url + key + "&" + text + "&" + lang_str
@@ -220,121 +220,6 @@ $(document).ready(function() {
 
 
 //    $('#form').on('submit', function(e){
-////        e.preventDefault();
-//        $.ajax({
-//            url: 'http://127.0.0.1:5000/square/',
-//            data: {'number': number},
-//            method: 'POST',
-//            success: function(data) {
-//                $('#num').val('');
-//                $('#square').html('Square of ' + number + ' is ' + data['square'])
-//            }
-//        });
-//    });
-
-//    navigator.getUserMedia = ( navigator.getUserMedia ||
-//    navigator.webkitGetUserMedia ||
-//    navigator.mozGetUserMedia ||
-//    navigator.msGetUserMedia);
-//
-//
-//    var webcamStream;
-//
-//    var localMediaStream;
-//
-//    var video = document.querySelector("#videoElement");
-//
-//    function startWebcam() {
-//        if (navigator.getUserMedia) {
-//            navigator.getUserMedia ({
-//                video: true,
-//                audio: false
-//            },
-//            // successCallback
-//            onUserMediaSuccess = function(localMediaStream) {
-//                video.srcObject = localMediaStream;
-//                webcamStream = localMediaStream;
-//            },
-//            // errorCallback
-//            function(err) {
-//                console.log("The following error occured: " + err);
-//            });
-//        } else {
-//            console.log("getUserMedia not supported");
-//        }
-//    }
-//
-//    function stopWebcam() {
-//        video.pause();
-//        webcamStream.getVideoTracks()[0].stop();
-//    }
-//
-//    $(".start").on('click', function() {
-//        startWebcam();
-//    })
-//
-//    $(".stop").on('click', function() {
-//        stopWebcam();
-//    })
-//
-//    //---------------------
-//    // TAKE A SNAPSHOT CODE
-//    //---------------------
-//    var canvas;
-//    var ctx;
-//
-//    function snapshot() {
-//        const canvas = document.getElementById("videoElement");
-//        const ctx = canvas.getContext('2d');
-//        // Draws current image from the video element into the canvas
-//        ctx.drawImage(video, 0,0, canvas.width, canvas.height);
-//        ctx.drawImage(vid, 0,0); // the video
-//        return new Promise((res, rej)=>{
-//        canvas.toBlob(res, 'image/jpeg'); // request a Blob from the canvas
-//        });
-//    }
-//
-//    $(".snapshot").on('click', function() {
-//        console.log("here");
-//        takeASnap()
-//        .then(download);
-//        stopWebcam();
-//
-////        $.ajax({
-////            url: 'http://127.0.0.1:5000/img_feed/',
-////            data: {'number': number},
-////            method: 'POST',
-////            success: function(data) {
-////                $('#num').val('');
-////                $('#square').html('Square of ' + number + ' is ' + data['square'])
-////            }
-////        });
-//    })
-//
-//
-//    function takeASnap(){
-//        const canvas = document.createElement('canvas'); // create a canvas
-//        const ctx = canvas.getContext('2d'); // get its context
-//        canvas.width = video.videoWidth; // set its size to the one of the video
-//        canvas.height = video.videoHeight;
-//        ctx.drawImage(video, 0,0); // the video
-////        var dataURL = canvas.toDataURL('image/jpeg', 1.0);
-////        document.querySelector('#dl-btn').href = dataURL;
-//
-////        console.log(dataURL)
-//      return new Promise((res, rej)=>{
-//        canvas.toBlob(res, 'image/jpeg'); // request a Blob from the canvas
-//      });
-//    }
-//    function download(blob){
-//        // uses the <a download> to download a Blob
-//        let a = document.createElement('a');
-//        a.href = URL.createObjectURL(blob);
-//        a.download = 'screenshot.jpg';
-//        document.body.appendChild(a);
-//    }
-
-
-
+///
 })
 
